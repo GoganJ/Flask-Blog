@@ -5,6 +5,7 @@ import datetime
 import os
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgres://aueiyiqmmdalmh:e5a02f93452d237e2e883f78880a317be2fad269237ffc58f75094a2b2b4f2db@ec2-35-171-57-132.compute-1.amazonaws.com:5432/d4mj6badlnh268')
 
 @app.route('/')
 def hello_world():
